@@ -1,7 +1,6 @@
 # **Data Mining and Machine Learning Project**
 ## **APS Failure at Scania Trucks Data Set**
 
-_(Kaggle user: JRico)_
 
 ### **PROBLEM DEFINITION**
 
