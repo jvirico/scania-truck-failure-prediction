@@ -1,5 +1,5 @@
 # **Data Mining and Machine Learning Project** - Python, Scikit-learn and APS Failure at Scania Trucks Data Set
-
+by Javier Rico (jvirico@gmail.com)
 
 
 ### **PROBLEM DEFINITION**
