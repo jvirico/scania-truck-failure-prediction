@@ -1,16 +1,13 @@
-**Data Mining and Machine Learning**
-
-**APS Failure at Scania Trucks Data Set**
-
-**Assignment 2 – 2019**
+# **Data Mining and Machine Learning Project**
+## **APS Failure at Scania Trucks Data Set**
 
 _(Kaggle user: JRico)_
 
-**PROBLEM DEFINITION**
+### **PROBLEM DEFINITION**
 
 The goal is to minimize maintenance costs of the air pressure system (APS) of Scania trucks. Therefore, failures should be predicted before they occur. Falsely predicting a failure has a cost of 100, missing a failure has a cost of 3500. This leads to the need to cost minimization.
 
-**IMPLEMENTATION AND PROCESS**
+### **IMPLEMENTATION AND PROCESS**
 
 Python 3, Jupyter Notebook and Scikit-learn Machine Learning library have been used to approach this binary classification challenge.
 
@@ -63,7 +60,7 @@ The process followed has been an iteration of different combinations of the step
 
 - **Summary of methods**
 
-**DATA ANALYSIS / DISCOVERY**
+### **DATA ANALYSIS / DISCOVERY**
 
 The data consists of a training set with 60000 rows, of which 1000 belong to the positive class, and 171 columns, of which one is the Class column. All the attributes are numeric, except Class that is a Boolean.
 
@@ -150,7 +147,7 @@ Most of the times 0.8 has shown good results, as shown above, this setting gets 
 
 For the rest of NaNs and 0s, replacement (mean/median) has been performed. For NaNs an imputation algorithm has been used (_sklearn.preprocessing.__ **imputer** _).
 
-**DATA PREPARATION / CLEANSING**
+### **DATA PREPARATION / CLEANSING**
 
 Transformations used:
 
@@ -302,7 +299,7 @@ Resampling strategies directly affect the final score since False Positives have
 
 - When Random Forest has been used, different weights have been set up for True and False classes (example: class\_weight={0:1,1:35}).
 
-**MODEL SELECTION**
+### **MODEL SELECTION**
 
 Model selection, ensemble learning.
 
@@ -338,7 +335,7 @@ Notes:
 
 Bagging has shown small but consistent improvements in many configurations. Decreasing the number of estimators below 10 has shown bad results.
 
-**PARAMETER TUNING**
+### **PARAMETER TUNING**
 
 GridSearch
 
@@ -364,7 +361,7 @@ Main parameters of the implementation are located at the beginning of the Jupyte
 
 ![](RackMultipart20210127-4-1jy967e_html_c9fc2140647eb454.png)
 
-**TRAINING THE MODEL**
+### **TRAINING THE MODEL**
 
 Two options before and after finally training the model have been used to try to improve the result.
 
@@ -384,7 +381,7 @@ Notes:
 
 1. Train-Test splits have always been performed using **stratification**.
 
-**EVALUATING THE MODEL**
+### **EVALUATING THE MODEL**
 
 Model accuracy, confusion Matrix, and score, are the measures used to evaluate the results.
 
@@ -402,7 +399,7 @@ Score example:
 
 ![](RackMultipart20210127-4-1jy967e_html_f2266310b7a34833.png)
 
-**PREDICTION**
+### **PREDICTION**
 
 All data transformations, cleansing, feature selection, projections, except for resampling, are applied to the Test dataset. Those operations that could not be replicated in the Test dataset have been avoided.
 
@@ -410,7 +407,7 @@ Recently trained model is used to predict the Test dataset Class feature. Good r
 
 Every Kaggle upload has in its description the hyperparameters used, to replicate any upload the only thing needed is to set those options and run it again. Random seeds, when used, are also informed in the description.
 
-**SUMMARY OF METHODS**
+### **SUMMARY OF METHODS**
 
 - imblearn.over\_sampling. **SMOTE** (resampling)
 - imblearn.over\_sampling. **ADASYN** (resampling)
