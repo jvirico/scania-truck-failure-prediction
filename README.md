@@ -12,7 +12,7 @@ Python 3, Jupyter Notebook and Scikit-learn Machine Learning library have been u
 
 The implementation has a HYPERPARAMETERs section at the beginning to turn on and off almost all decisions considered in the process.
 
-![](./imgs/hyperparameter.png.png)
+![](./imgs/hyperparameter.png)
 
 _ **IMPORTANT** _: Note that not all transformations and techniques explained in this document have been applied to the final solution, but many will be explained to expose the process followed. Each solution uploaded to Kaggle competition has the hyperparameters used informed in its description, random seeds, when used, are also informed there.
 
