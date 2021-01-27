@@ -1,5 +1,5 @@
-# **Data Mining and Machine Learning Project**
-## **APS Failure at Scania Trucks Data Set**
+# **Data Mining and Machine Learning Project** - Python, Scikit-learn and APS Failure at Scania Trucks Data Set
+
 
 
 ### **PROBLEM DEFINITION**
@@ -15,6 +15,8 @@ The implementation has a HYPERPARAMETERs section at the beginning to turn on and
 ![](./imgs/hyperparameter.png)
 
 _**IMPORTANT**_: Note that not all transformations and techniques explained in this document have been applied to the final solution, but many will be explained to expose the process followed. Each solution uploaded to Kaggle competition has the hyperparameters used informed in its description, random seeds, when used, are also informed there.
+
+---
 
 The process followed has been an iteration of different combinations of the steps listed below. Those steps that resulted in improvements have been consistently used, these are explained in the _Conclusions_ and _Notes_ below each section:
 
@@ -59,7 +61,7 @@ The process followed has been an iteration of different combinations of the step
 
 - **Summary of methods**
 
-
+---
 ### **DATA ANALYSIS / DISCOVERY**
 
 The data consists of a training set with 60000 rows, of which 1000 belong to the positive class, and 171 columns, of which one is the Class column. All the attributes are numeric, except Class that is a Boolean.
@@ -74,17 +76,24 @@ The data consists of a training set with 60000 rows, of which 1000 belong to the
 
 ![](./imgs/datatypesfeatures.png)
 
-Conclusions:
+### Conclusions:
+
+---
 
 All features are numeric values.
+---
 
 **Dataset Statistics**
 
 ![](./imgs/datasetstats.png)
 
-Conclusions:
+### Conclusions:
+
+---
 
 There are features with up to 81% of missing values (0&#39;s and NaNs). Almost all features have sparse NaNs and 0s.
+
+---
 
 **Feature Class imbalance**
 
@@ -304,7 +313,7 @@ Some approaches that have been tried:
 
 ![](./imgs/upsampling.png)
 
-### Notes:
+### Notes:
 
 ---
 
@@ -344,7 +353,7 @@ SVM has shown to be much more computationally expensive compared with the rest o
 
 Random Forest:
 
-![](RackMultipart20210127-4-1jy967e_html_d7f8dd16d037703d.png)
+![](./imgs/rf.png)
 
 ### Notes:
 ---
@@ -437,6 +446,8 @@ All data transformations, cleansing, feature selection, projections, except for 
 Recently trained model is used to predict the Test dataset Class feature. Good results, or sometimes just very different approaches, are uploaded to Kaggle challenge.
 
 Every Kaggle upload has in its description the hyperparameters used, to replicate any upload the only thing needed is to set those options and run it again. Random seeds, when used, are also informed in the description.
+
+---
 
 ### **SUMMARY OF METHODS**
 
