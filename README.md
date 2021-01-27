@@ -1,5 +1,5 @@
 # **Data Mining and Machine Learning Project**
-## **APS Failure at Scania Trucks Data Set**
+## **APS Failure at Scania Trucks Data Set**
 
 
 ### **PROBLEM DEFINITION**
@@ -12,7 +12,7 @@ Python 3, Jupyter Notebook and Scikit-learn Machine Learning library have been u
 
 The implementation has a HYPERPARAMETERs section at the beginning to turn on and off almost all decisions considered in the process.
 
-![](RackMultipart20210127-4-1jy967e_html_10ca6180d9cf0f6b.png)
+![](../imgs/hyperparameter.png.png)
 
 _ **IMPORTANT** _: Note that not all transformations and techniques explained in this document have been applied to the final solution, but many will be explained to expose the process followed. Each solution uploaded to Kaggle competition has the hyperparameters used informed in its description, random seeds, when used, are also informed there.
 
