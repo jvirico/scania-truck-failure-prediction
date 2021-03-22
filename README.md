@@ -1,6 +1,8 @@
-# **Data Mining and Machine Learning Project** - Python, Scikit-learn and APS Failure at Scania Trucks Data Set
-by Javier Rico (jvirico@gmail.com)
+# Scania Trucks Failure Prediction
+**Data Mining and Machine Learning Project** using Python, Scikit-learn and APS Failure at Scania Trucks Data Set [1].
 
+#### Author
+    J. Rico (jvirico@gmail.com)
 
 ### **PROBLEM DEFINITION**
 
@@ -146,8 +148,7 @@ IQR - **Interquartile Range Rule** has been used to remove them:
 
 Almost all features have sparse NaNs and Zeros.
 
-<img src="./imgs/colremoval.png" alt="drawing" width="200"/>
-
+<img src="./imgs/colremoval.png" alt="drawing" width="250"/>
 <img src="./imgs/colfiltering.png" alt="drawing" width="350"/>
 <img src="./imgs/removebadcols.png" alt="drawing" width="350"/>
 
@@ -184,7 +185,8 @@ Transformations used:
 
 **Feature Class to 0-1 values**
 
-![](./imgs/classTo01.png)
+<img src="./imgs/classTo01.png" alt="drawing" width="300"/>
+
 
 ### Note:
 ---
@@ -227,7 +229,8 @@ Most of the times 0.8 has shown good results.
 1. Applied in the majority of trials with threshold = 0.8.
 2. Applied always, replacing with mean value most of the times. For this an imputation of missing values using _sklearn.preprocessing.__ **imputer** _ has been performed.
 
-![](./imgs/NaNreplacement.png)
+
+<img src="./imgs/NaNreplacement.png" alt="drawing" width="500"/>
 
 ---
 
@@ -239,9 +242,11 @@ Projecting Bins (histograms) into 7 new features:
 
 - When this is applied, we assume the loss of the distributions of the original bins as histograms of the original attributes.
 
-![](./imgs/dataProjections.png)
-![](./imgs/newColFromBin.png)
-![](./imgs/projectBins.png)
+
+<img src="./imgs/dataProjections.png" alt="drawing" width="250"/>
+<img src="./imgs/newColFromBin.png" alt="drawing" width="400"/>
+<img src="./imgs/projectBins.png" alt="drawing" width="400"/>
+
 
 ### Note:
 ---
@@ -262,30 +267,34 @@ Feature correlation using Pearson&#39;s Correlation has been performed.
 
 The data has a lot of features, because of that, is very difficult to visualize hierarchical graphs. We use a table instead.
 
-![](./imgs/intercorrelation.png)
+<img src="./imgs/intercorrelation.png" alt="drawing" width="450"/>
 
 Top correlated features with Class:
 
 Feature ranking is made based on top feature correlations with Class attribute.
 
-![](./imgs/runCorrelationAnalysis.png)
+<img src="./imgs/runCorrelationAnalysis.png" alt="drawing" width="300"/>
 
 Several feature sub sets are selected based on top correlated ranking.
 
-![](./imgs/featureSelection.png)
-![](./imgs/corrFeatureSelection.png)
+<img src="./imgs/featureSelection.png" alt="drawing" width="350"/>
+<img src="./imgs/corrFeatureSelection.png" alt="drawing" width="400"/>
+
 
 (After Feature Selection)
 
-![](./imgs/runCorrAnalysis.png)
+<img src="./imgs/runCorrAnalysis.png" alt="drawing" width="300"/>
+
 
 Corr\_FeatureSelection = 1
 
-![](./imgs/corrMap.png)
+<img src="./imgs/corrMap.png" alt="drawing" width="450"/>
+
 
 Corr\_FeatureSelection = 2
 
-![](./imgs/corrMap2.png)
+<img src="./imgs/corrMap2.png" alt="drawing" width="250"/>
+
 
 ### Note:
 
@@ -310,15 +319,16 @@ Some approaches that have been tried:
 
 **SMOTE** : Synthetic Minority Over Sampling Technique (SMOTE) algorithm applies KNN approach where it selects K nearest neighbors, joins them and creates the synthetic samples in the space. The algorithm takes the feature vectors and its nearest neighbors, computes the distance between these vectors. The difference is multiplied by random number between (0, 1) and it is added back to feature. SMOTE algorithm is a pioneer algorithm and many other algorithms are derived from SMOTE.
 
-![](./imgs/SMOTE.png)
+<img src="./imgs/SMOTE.png" alt="drawing" width="400"/>
+
 
 **ADASYN** : ADAptive SYNthetic (ADASYN) is based on the idea of adaptively generating minority data samples according to their distributions using K nearest neighbor. The algorithm adaptively updates the distribution and there are no assumptions made for the underlying distribution of the data. The algorithm uses Euclidean distance for KNN Algorithm. The key difference between ADASYN and SMOTE is that the former uses a density distribution, as a criterion to automatically decide the number of synthetic samples that must be generated for each minority sample by adaptively changing the weights of the different minority samples to compensate for the skewed distributions. The latter generates the same number of synthetic samples for each original minority sample.
 
 ---
 
-![](./imgs/resampling.png)
+<img src="./imgs/resampling.png" alt="drawing" width="350"/>
 
-![](./imgs/upsampling.png)
+<img src="./imgs/upsampling.png" alt="drawing" width="500"/>
 
 ### Notes:
 
@@ -330,7 +340,8 @@ Resampling strategies directly affect the final score since False Positives have
 
 - Scikit-learn Make Scorer (sklearn.metrics.make\_scorer) have been used in conjunction with GridSearch to favor models with better scores. For this, a custom GetScore function has been coded to fit our case.
 
-![](./imgs/getCost2.png)
+<img src="./imgs/getCost2.png" alt="drawing" width="400"/>
+
 
 - When Random Forest has been used, different weights have been set up for True and False classes (example: class\_weight={0:1,1:35}).
 
@@ -344,11 +355,12 @@ Two main algorithms have been considered, Support Vector Machine and Random Fore
 
 Bagging has been also used as ensemble learning technique, usually with 10 estimators.
 
-![](./imgs/bagging.png)
+<img src="./imgs/bagging.png" alt="drawing" width="400"/>
 
 Support Vector Machine
 
-![](./imgs/svm.png)
+<img src="./imgs/svm.png" alt="drawing" width="450"/>
+
 
 ### Notes:
 
@@ -360,7 +372,7 @@ SVM has shown to be much more computationally expensive compared with the rest o
 
 Random Forest:
 
-![](./imgs/rf.png)
+<img src="./imgs/rf.png" alt="drawing" width="500"/>
 
 ### Notes:
 ---
@@ -372,7 +384,8 @@ Pruning on Random Forest using _max\_depth_ has been performed to avoid overfitt
 
 Bagging:
 
-![](./imgs/bagging2.png)
+<img src="./imgs/bagging2.png" alt="drawing" width="150"/>
+
 
 ### Notes:
 ---
@@ -386,7 +399,7 @@ GridSearch:
 
 GridSearch has been used to try different configurations on both, RF and SVM.
 
-![](./imgs/gridSearch.png)
+<img src="./imgs/gridSearch.png" alt="drawing" width="500"/>
 
 
 ### Notes:
@@ -394,7 +407,8 @@ GridSearch has been used to try different configurations on both, RF and SVM.
 ---
 Scikit-learn Make Scorer (sklearn.metrics.make\_scorer) has been used in conjunction with GridSearch to favor models with better scores. For this, a custom GetScore function has been coded to fit our case.
 
-![](./imgs/getCost.png)
+<img src="./imgs/getCost.png" alt="drawing" width="350"/>
+
 
 ---
 
@@ -402,10 +416,12 @@ Hyperparameters section:
 
 Main parameters of the implementation are located at the beginning of the Jupyter Notebook to facilitate an iterative training using different strategies.
 
-![](./imgs/hyperperameter2.png)
-![](./imgs/hyperparameter3.png)
-![](./imgs/hyperparameter4.png)
-![](./imgs/hyperparameter5.png)
+<img src="./imgs/hyperperameter2.png" alt="drawing" width="500"/>
+<img src="./imgs/hyperparameter3.png" alt="drawing" width="500"/>
+<img src="./imgs/hyperparameter4.png" alt="drawing" width="500"/>
+<img src="./imgs/hyperparameter5.png" alt="drawing" width="500"/>
+
+
 
 ### **TRAINING THE MODEL**
 
@@ -413,11 +429,12 @@ Two options before and after finally training the model have been used to try to
 
 1. Change the train-test dataset split. Usually preformed with 80/20 or 90/10 when full up-sampling.
 
-![](./imgs/trainingModel1.png)
+<img src="./imgs/trainingModel1.png" alt="drawing" width="400"/>
 
-2. &#39;Favor True class&#39;, after training the model.
+1. &#39;Favor True class&#39;, after training the model.
 
-![](./imgs/trainingModel2.png)
+<img src="./imgs/trainingModel2.png" alt="drawing" width="500"/>
+
 
 When FavorTrueClass = True, all False predictions very close to 50% probability are switched to True class (a threshold is used, usually set to \&lt; 0.45).
 
@@ -434,17 +451,18 @@ Model accuracy, confusion Matrix, and score, are the measures used to evaluate t
 
 Confusion Matrix example:
 
-![](./imgs/confusionMatrix.png)
+<img src="./imgs/confusionMatrix.png" alt="drawing" width="300"/>
 
 Accuracy example:
 
-![](./imgs/accuracy.png)
+<img src="./imgs/accuracy.png" alt="drawing" width="150"/>
 
 Score example:
 
-![](./imgs/getCost2.png)
+<img src="./imgs/getCost2.png" alt="drawing" width="350"/>
 
-![](./imgs/printCost.png)
+<img src="./imgs/printCost.png" alt="drawing" width="200"/>
+
 
 ### **PREDICTION**
 
@@ -475,3 +493,6 @@ Every Kaggle upload has in its description the hyperparameters used, to replicat
 ## Cite this work
     J. Rico, (2019) DM and ML - Scania Trucks Failure prediction
     [Source code](https://github.com/jvirico/ScaniaTruckFailurePrediction)
+
+## References
+[1] - [J. Rico, (2019) Data Mining and Machine Learning - APS Failure at Scania Trucks Data Set](./SCANIA%20ML%20Challenge_Javier%20Rico.pdf).
