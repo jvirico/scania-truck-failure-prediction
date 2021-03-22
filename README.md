@@ -12,7 +12,7 @@ Python 3, Jupyter Notebook and Scikit-learn Machine Learning library have been u
 
 The implementation has a HYPERPARAMETERs section at the beginning to turn on and off almost all decisions considered in the process.
 
-![](./imgs/hyperparameter.png)
+<img src="./imgs/hyperparameter.png" alt="drawing" width="300"/>
 
 _**IMPORTANT**_: Note that not all transformations and techniques explained in this document have been applied to the final solution, but many will be explained to expose the process followed. Each solution uploaded to Kaggle competition has the hyperparameters used informed in its description, random seeds, when used, are also informed there.
 
@@ -74,7 +74,8 @@ The data consists of a training set with 60000 rows, of which 1000 belong to the
 
 **Data types of features**
 
-![](./imgs/datatypesfeatures.png)
+<img src="./imgs/datatypesfeatures.png" alt="drawing" width="250"/>
+
 
 ### Conclusions:
 
@@ -85,7 +86,8 @@ All features are numeric values.
 
 **Dataset Statistics**
 
-![](./imgs/datasetstats.png)
+<img src="./imgs/datasetstats.png" alt="drawing" width="350"/>
+
 
 ### Conclusions:
 
@@ -97,7 +99,7 @@ There are features with up to 81% of missing values (0&#39;s and NaNs). Almost a
 
 **Feature Class imbalance**
 
-![](./imgs/dsimbalance.png)
+<img src="./imgs/dsimbalance.png" alt="drawing" width="200"/>
 
 ### Conclusions:
 ---
@@ -113,17 +115,20 @@ These strategies directly affect the final score since False Positives have diff
 
 - Scikit-learn **Make Scorer** (sklearn.metrics.make\_scorer) have been used in conjunction with GridSearch to favor models with better scores. For this, a custom GetScore function has been coded to fit our case.
 
-![](./imgs/getCost.png)
+
+<img src="./imgs/getCost.png" alt="drawing" width="400"/>
 
 - When Random Forest has been used, different weights have been set up for True and False classes (example: class\_weight={0:1,1:35}).
 ---
 **Outliers (all features)**
 
-![](./imgs/outliers.png)
+<img src="./imgs/outliers.png" alt="drawing" width="300"/>
 
 Outliers (Trues profile vs Falses profile)
 
-![](./imgs/outliers2.png)![](./imgs/outliers3.png)
+<img src="./imgs/outliers2.png" alt="drawing" width="300"/>
+<img src="./imgs/outliers3.png" alt="drawing" width="300"/>
+
 
 ### Conclusions:
 ---
@@ -141,9 +146,11 @@ IQR - **Interquartile Range Rule** has been used to remove them:
 
 Almost all features have sparse NaNs and Zeros.
 
-![](./imgs/colremoval.png)
-![](./imgs/colfiltering.png)
-![](./imgs/removebadcols.png)
+<img src="./imgs/colremoval.png" alt="drawing" width="200"/>
+
+<img src="./imgs/colfiltering.png" alt="drawing" width="350"/>
+<img src="./imgs/removebadcols.png" alt="drawing" width="350"/>
+
 
 ### Conclusions:
 ---
@@ -463,3 +470,8 @@ Every Kaggle upload has in its description the hyperparameters used, to replicat
 - **Stratification** when splitting Train-Test datasets
 - **Bootstraping** option for models when possible
 - Interquartile Range Rule ( **IQR** ) for Outlier identification
+
+
+## Cite this work
+    J. Rico, (2019) DM and ML - Scania Trucks Failure prediction
+    [Source code](https://github.com/jvirico/ScaniaTruckFailurePrediction)
